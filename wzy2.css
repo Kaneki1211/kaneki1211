@@ -1,6 +1,6 @@
 @charset "utf-8";
 body {
-    background-image: url(图片/背景1.jpg);
+    background-image: url(./背景1.jpg);
 }
 
 #loginForm {
@@ -15,7 +15,7 @@ body {
 }
 
 #userName {
-    background-image: url(图片/用户小图标.jpg);
+    background-image: url(./用户小图标.jpg);
     background-repeat: no-repeat;
     background-position: 5px center;
     text-indent: 30px;
@@ -24,7 +24,7 @@ body {
 }
 
 #passWord {
-    background-image: url(图片/密码小图标.jpg);
+    background-image: url(./密码小图标.jpg);
     background-repeat: no-repeat;
     background-position: 5px center;
     text-indent: 30px;
