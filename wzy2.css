@@ -1,0 +1,40 @@
+@charset "utf-8";
+body {
+    background-image: url(图片/背景1.jpg);
+}
+
+#loginForm {
+    width: 250px;
+    height: 200px;
+    background-color: rgb(247, 142, 142);
+    margin: 500px auto;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#userName {
+    background-image: url(图片/用户小图标.jpg);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    text-indent: 30px;
+    height: 25px;
+    border: 1px solid rgb(225, 225, 220);
+}
+
+#passWord {
+    background-image: url(图片/密码小图标.jpg);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    text-indent: 30px;
+    height: 25px;
+    border: 1px solid rgb(225, 225, 220);
+}
+
+#btlogin {
+    width: 160px;
+    height: 30px;
+    background-color: rgb(137, 176, 221);
+    color: rgb(250, 250, 250);
+}
