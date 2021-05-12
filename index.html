@@ -1,20 +1,234 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Kaneki日记</title>
-    <link href="./wzy2.css" rel="stylesheet" />
-</head>
-
-<body>
-    <div id="loginForm">
-        <form>
-            <p><input id="userName" type="text" placeholder="小公举二丫" /></p>
-            <p><input id="passWord" type="passWord" placeholder="wzy0925" /></p>
-            <a href="./wzy.html"><p><input id="btlogin" type="button" value="登录" href="./wzy.html"></p>
-            </a>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaneki_1211</title>
+    <link rel="icon" href="图片/3.jpg">
+    
+    <style>
+        div{
+            width: 1920px;
+            height: 1080px;
+        }
+        .box_out{
+            width: 500px;
+            height: 200px;
+            border: 1px solid palevioletred;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            overflow: hidden;
+        }
+        .box_out_1{
+            width: 500px;
+            height: 300px;
+            border: 3px solid paleturquoise;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            overflow: hidden;
+        }
+        .box_out_2{
+            width: 500px;
+            height: 200px;
+            border: 3px solid palegoldenrod;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            overflow: hidden;
+        }
+        .box_out_3{
+            width: 500px;
+            height: 300px;
+            border: 3px solid palegreen;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            overflow: hidden;
+        }
+       
+       
+       
+       
+        .box_in{
             
-        </form>
+            width: 320px;
+            height: 100px;
+            border: palevioletred 3px solid;
+            border-radius: 20px;
+            position: absolute;
+            left: 10%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .box_in_1{
+            
+            width: 320px;
+            height: 100px;
+            border: palevioletred 3px solid;
+            border-radius: 20px;
+            position: absolute;
+            left: 30%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .box_in_2{
+            
+            width: 320px;
+            height: 100px;
+            border: palevioletred 3px solid;
+            border-radius: 20px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .box_in_3{
+            
+            width: 320px;
+            height: 100px;
+            border: palevioletred 3px solid;
+            border-radius: 20px;
+            position: absolute;
+            left: 70%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .box_in_4{
+            
+            width: 320px;
+            height: 100px;
+            border: palevioletred 3px solid;
+            border-radius: 20px;
+            position: absolute;
+            left: 90%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .box_in_5{
+            
+            width: 320px;
+            height: 100px;
+            border: palevioletred 3px solid;
+            border-radius: 20px;
+            position: absolute;
+            left: 110%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .box_in_6{
+            
+            width: 320px;
+            height: 100px;
+            border: palevioletred 3px solid;
+            border-radius: 20px;
+            position: absolute;
+            left: 130%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .box_in_7{
+            
+            width: 320px;
+            height: 100px;
+            border: palevioletred 3px solid;
+            border-radius: 20px;
+            position: absolute;
+            left: -20%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+
+        .label{
+            font-size: 80px;
+            color: palevioletred;    
+        }
+      
+    </style>
+</head>
+<body>
+    <div onclick="togClass2">
+        
+        <img id="img1" src="./图片/1.png" width="100%" height="100%">
+        <div class="box_out" id="box_out">
+            <div class="box_in" id="box_in">
+                <label id="time" class="label"></label>
+            </div>
+        </div>
     </div>
+    <script>
+        window.onload = function(){
+            setInterval(updateTime,1000);
+            setInterval(togClass,1000);
+            setInterval(togClass1,500);
+            setInterval(togClass2,3000);
+        }
+
+        function updateTime() {
+            var date = new Date();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            if(h<10) {
+                h = '0'+h;
+            }
+            if(m<10) {
+                m = '0'+m;
+            }
+            if(s<10) {
+                s = '0'+s;
+            }
+            document.getElementById("time").innerText = h+':'+m+':'+s;
+        }
+        var classs = [
+            'box_out',
+            'box_out_1',
+            'box_out_2',
+            'box_out_3',
+            
+            'box_in',
+            'box_in_1',
+            'box_in_2',
+            'box_in_3',
+            'box_in_4',
+            'box_in_5',
+            'box_in_6',
+            'box_in_7',
+
+
+        ];
+        var i = 0;
+        function togClass() {
+            document.getElementById("box_out").className = classs[i];
+            i += 1;
+            if(i ==4){
+                i = 0;
+            }
+        }
+        var j = 4;
+        function togClass1() {
+            document.getElementById("box_in").className = classs[j];
+            j += 1;
+            if(j ==12){
+                j = 4;
+            }
+        }
+        var k = 1;
+        function togClass2() {
+            k++;           
+            document.getElementById("img1").src="./图片/"+k+".png";
+            
+            if(k ==5){
+                k = 0;
+            }
+        }
+    </script>
 </body>
+</html>
