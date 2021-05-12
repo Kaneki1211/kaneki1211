@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaneki_1211</title>
-    <link rel="icon" href="图片/3.jpg">
+    <link rel="icon" href="./3.jpg">
     
     <style>
         div{
@@ -52,10 +52,7 @@
             transform: translate(-50%,-50%);
             overflow: hidden;
         }
-       
-       
-       
-       
+             
         .box_in{
             
             width: 320px;
@@ -149,14 +146,14 @@
         .label{
             font-size: 80px;
             color: palevioletred;    
-        }
-      
+        }     
     </style>
+    
 </head>
 <body>
     <div onclick="togClass2">
         
-        <img id="img1" src="./图片/1.png" width="100%" height="100%">
+        <img id="img1" src="./1.png" width="100%" height="100%">
         <div class="box_out" id="box_out">
             <div class="box_in" id="box_in">
                 <label id="time" class="label"></label>
@@ -223,7 +220,7 @@
         var k = 1;
         function togClass2() {
             k++;           
-            document.getElementById("img1").src="./图片/"+k+".png";
+            document.getElementById("img1").src="./"+k+".png";
             
             if(k ==5){
                 k = 0;
